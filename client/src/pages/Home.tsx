@@ -46,10 +46,10 @@ export const Home = (): JSX.Element => {
 
       {/* Main Content */}
       <div className="pt-20 px-6">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-screen">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-0 items-center min-h-screen">
           
           {/* Left Side - Content */}
-          <div className="space-y-8">
+          <div className="space-y-8 pr-8">
             <div className="space-y-4">
               <h2 className="text-white text-3xl font-light italic" data-testid="heading-tagline">
                 Innovate Unique
@@ -163,15 +163,15 @@ export const Home = (): JSX.Element => {
           </div>
 
           {/* Right Side - Character Illustration */}
-          <div className="relative flex justify-center items-center">
+          <div className="relative h-screen flex items-end justify-end overflow-hidden">
             {/* Sparkle decorations */}
-            <div className="absolute top-20 right-20 text-white/40 text-4xl animate-pulse">✦</div>
-            <div className="absolute bottom-32 right-32 text-white/40 text-2xl animate-pulse delay-1000">✦</div>
+            <div className="absolute top-20 right-20 text-white/40 text-4xl animate-pulse z-10">✦</div>
+            <div className="absolute bottom-1/3 right-1/4 text-white/40 text-2xl animate-pulse delay-1000 z-10">✦</div>
             
-            {/* Character illustration placeholder - using existing image */}
-            <div className="relative">
+            {/* Character illustration covering full right section */}
+            <div className="relative w-full h-full flex items-end justify-end">
               <img
-                className="w-96 h-auto object-contain"
+                className="h-full w-auto object-cover object-right"
                 alt="Tanmay Character"
                 src="/figmaAssets/image-pngofmine.png"
                 data-testid="character-illustration"
