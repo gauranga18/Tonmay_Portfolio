@@ -1,27 +1,14 @@
-import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-} from "@/components/ui/navigation-menu";
+import { Link } from "wouter";
 
 export const PersonalWebsite = (): JSX.Element => {
-  // Navigation items data
-  const navItems = [
-    { label: "Home", isActive: true },
-    { label: "About", isActive: false },
-    { label: "Skills", isActive: false },
-    { label: "Projects", isActive: false },
-  ];
 
   // Social media icons data
   const socialIcons = [
-    { src: "/figmaAssets/vector-1.svg", alt: "Instagram" },
-    { src: "/figmaAssets/group.png", alt: "LinkedIn" },
-    { src: "/figmaAssets/vector-2.svg", alt: "Gmail" },
+    { src: "/figmaAssets/vector-1.svg", alt: "Instagram", url: "https://instagram.com/tanmay_designer" },
+    { src: "/figmaAssets/group.png", alt: "LinkedIn", url: "https://linkedin.com/in/tanmay-ui-dev" },
+    { src: "/figmaAssets/vector-2.svg", alt: "Gmail", url: "mailto:tanmay@example.com" },
   ];
 
   // Service cards data
@@ -89,19 +76,28 @@ export const PersonalWebsite = (): JSX.Element => {
 
           {/* Navigation Menu */}
           <div className="absolute w-[475px] h-[38px] top-12 left-0">
-            <NavigationMenu className="w-full">
-              <NavigationMenuList className="absolute w-[455px] h-[38px] top-0 left-5 flex justify-start gap-[75px]">
-                {navItems.map((item, index) => (
-                  <NavigationMenuItem key={index}>
-                    <NavigationMenuLink
-                      className={`[font-family:'Poppins',Helvetica] font-normal text-white text-[25px] tracking-[0] leading-[normal] ${item.isActive ? "px-4 py-1 rounded-[20px] border border-solid border-[#fff9f9]" : ""}`}
-                    >
-                      {item.label}
-                    </NavigationMenuLink>
-                  </NavigationMenuItem>
-                ))}
-              </NavigationMenuList>
-            </NavigationMenu>
+            <nav className="absolute w-[455px] h-[38px] top-0 left-5 flex justify-start gap-[75px]">
+              <Link href="/">
+                <a className="[font-family:'Poppins',Helvetica] font-normal text-white text-[25px] tracking-[0] leading-[normal] px-4 py-1 rounded-[20px] border border-solid border-[#fff9f9]" data-testid="nav-home">
+                  Home
+                </a>
+              </Link>
+              <Link href="/about">
+                <a className="[font-family:'Poppins',Helvetica] font-normal text-white text-[25px] tracking-[0] leading-[normal] hover:px-4 hover:py-1 hover:rounded-[20px] hover:border hover:border-white transition-all" data-testid="nav-about">
+                  About
+                </a>
+              </Link>
+              <Link href="/skills">
+                <a className="[font-family:'Poppins',Helvetica] font-normal text-white text-[25px] tracking-[0] leading-[normal] hover:px-4 hover:py-1 hover:rounded-[20px] hover:border hover:border-white transition-all" data-testid="nav-skills">
+                  Skills
+                </a>
+              </Link>
+              <Link href="/projects">
+                <a className="[font-family:'Poppins',Helvetica] font-normal text-white text-[25px] tracking-[0] leading-[normal] hover:px-4 hover:py-1 hover:rounded-[20px] hover:border hover:border-white transition-all" data-testid="nav-projects">
+                  Projects
+                </a>
+              </Link>
+            </nav>
           </div>
 
           <div className="absolute w-[466px] top-[376px] left-[7px] [font-family:'Poppins',Helvetica] font-normal text-white text-xl tracking-[0] leading-[normal]">
@@ -112,19 +108,27 @@ export const PersonalWebsite = (): JSX.Element => {
           </div>
 
           {/* Explore My Works Button */}
-          <Button className="absolute w-[266px] h-[58px] top-[494px] left-0 bg-[#5e50ff99] rounded-[20px] border border-solid border-[#07dbc9] shadow-[0px_4px_4px_#00000040] [font-family:'Poppins',Helvetica] font-light italic text-[#fafff9] text-[25px] tracking-[0] leading-[normal]">
-            Explore My works
-          </Button>
+          <Link href="/projects">
+            <Button className="absolute w-[266px] h-[58px] top-[494px] left-0 bg-[#5e50ff99] rounded-[20px] border border-solid border-[#07dbc9] shadow-[0px_4px_4px_#00000040] [font-family:'Poppins',Helvetica] font-light italic text-[#fafff9] text-[25px] tracking-[0] leading-[normal] hover:bg-[#5e50ffcc] transition-all" data-testid="button-explore-works">
+              Explore My works
+            </Button>
+          </Link>
 
           {/* Social Media Icons */}
           <div className="absolute w-[196px] h-[53px] top-[866px] left-5 flex gap-[30px]">
             {socialIcons.map((icon, index) => (
-              <img
+              <button
                 key={index}
-                className="h-[45px] w-auto"
-                alt={icon.alt}
-                src={icon.src}
-              />
+                onClick={() => window.open(icon.url, '_blank')}
+                className="hover:scale-110 transition-transform cursor-pointer"
+                data-testid={`social-${icon.alt.toLowerCase()}`}
+              >
+                <img
+                  className="h-[45px] w-auto"
+                  alt={icon.alt}
+                  src={icon.src}
+                />
+              </button>
             ))}
           </div>
 
@@ -205,7 +209,11 @@ export const PersonalWebsite = (): JSX.Element => {
         />
 
         {/* Contact Button */}
-        <Button className="fixed w-[170px] h-[53px] top-[34px] left-[1243px] rounded-[30px] border-[3px] border-solid border-[#0599f5] shadow-[0px_4px_4px_#00000040] [font-family:'Poppins',Helvetica] font-medium text-[#f8fcff] text-xl">
+        <Button 
+          className="fixed w-[170px] h-[53px] top-[34px] left-[1243px] rounded-[30px] border-[3px] border-solid border-[#0599f5] shadow-[0px_4px_4px_#00000040] [font-family:'Poppins',Helvetica] font-medium text-[#f8fcff] text-xl bg-transparent hover:bg-[#0599f5] transition-all" 
+          data-testid="button-contact"
+          onClick={() => window.open('mailto:tanmay@example.com', '_blank')}
+        >
           Contact
         </Button>
       </div>
