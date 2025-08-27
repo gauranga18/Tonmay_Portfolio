@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "wouter";
 import { ExternalLink, Github } from "lucide-react";
+import { Navbar } from "@/components/Navbar";
 
 export const Projects = (): JSX.Element => {
   const projects = [
@@ -39,7 +40,7 @@ export const Projects = (): JSX.Element => {
       id: 5,
       title: "Money Management Application UI&UX Design",
       description: "Build with: Figma\n\nAn intuitive fintech app interface designed to help monitor savings, and manage accounts securely. The design features a clean visual hierarchy, and friendly clarity through interactive elements and user analytics.",
-      image: "/figmaAssets/image-4.png",
+      image: "/figmaAssets/image-6.png",
       category: "UI/UX Design"
     },
     {
@@ -53,43 +54,7 @@ export const Projects = (): JSX.Element => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-500 to-cyan-400">
-      {/* Header Navigation */}
-      <header className="fixed top-0 left-0 right-0 z-50 px-6 py-4">
-        <div className="flex justify-between items-center max-w-7xl mx-auto">
-          <div className="flex items-center gap-4">
-            <img
-              className="w-12 h-12 rounded-full object-cover"
-              alt="Profile"
-              src="/figmaAssets/ellipse-1.png"
-              data-testid="profile-logo"
-            />
-          </div>
-          
-          <nav className="flex gap-8">
-            <Link href="/" className="text-white font-medium text-lg hover:text-white/80 transition-colors" data-testid="nav-home">
-              Home
-            </Link>
-            <Link href="/about" className="text-white font-medium text-lg hover:text-white/80 transition-colors" data-testid="nav-about">
-              About
-            </Link>
-            <Link href="/skills" className="text-white font-medium text-lg hover:text-white/80 transition-colors" data-testid="nav-skills">
-              Skills
-            </Link>
-            <Link href="/projects" className="text-white font-medium text-lg px-4 py-2 rounded-full border border-white/30 hover:bg-white/10 transition-all" data-testid="nav-projects">
-              Projects
-            </Link>
-          </nav>
-
-          <Link href="/contact">
-            <Button 
-              className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-full font-medium hover:bg-white hover:text-blue-600 transition-all"
-              data-testid="button-contact"
-            >
-              Contact
-            </Button>
-          </Link>
-        </div>
-      </header>
+      <Navbar />
 
       {/* Main Content */}
       <div className="pt-20 px-6 pb-8">
