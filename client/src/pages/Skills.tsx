@@ -4,22 +4,37 @@ import { Link } from "wouter";
 import { Navbar } from "@/components/Navbar";
 
 export const Skills = (): JSX.Element => {
+  // Import all skill icons (place images in `client/src/assets/skill-icons`)
+  const iconModules = import.meta.glob(
+    '@/assets/skill-icons/*.{png,jpg,jpeg,svg}',
+    { eager: true, as: 'url' }
+  ) as Record<string, string>;
+
+  // Helper function to get icon path by name
+  const getIcon = (iconName: string) => {
+    const normalized = iconName.toLowerCase().replace(/\s+/g, '-');
+    const match = Object.entries(iconModules).find(([path]) =>
+      path.toLowerCase().includes(`${normalized}.`)
+    );
+    return match ? match[1] : '';
+  };
+
   const technicalSkills = [
-    { name: "HTML", icon: "🔶" },
-    { name: "CSS", icon: "🔷" },
-    { name: "Figma", icon: "🎨" },
-    { name: "Adobe Express", icon: "📱" },
-    { name: "C", icon: "⚡" },
-    { name: "Python", icon: "🐍" },
-    { name: "C++", icon: "⚙️" },
-    { name: "MySQL", icon: "🗄️" }
+    { name: "HTML", icon: "html" },
+    { name: "CSS", icon: "css" },
+    { name: "Figma", icon: "figma" },
+    { name: "Adobe Express", icon: "adobe-express" },
+    { name: "C", icon: "c" },
+    { name: "Python", icon: "python" },
+    { name: "C++", icon: "cpp" },
+    { name: "MySQL", icon: "mysql" }
   ];
 
   const designingSkills = [
-    { name: "Web Design", icon: "🌐" },
-    { name: "App Design", icon: "📱" },
-    { name: "Logo Design", icon: "⚪" },
-    { name: "Brand Design", icon: "✨" }
+    { name: "Web Design", icon: "web-design" },
+    { name: "App Design", icon: "app-design" },
+    { name: "Logo Design", icon: "logo-design" },
+    { name: "Brand Design", icon: "brand-design" }
   ];
 
   const interpersonalSkills = [
@@ -58,8 +73,12 @@ export const Skills = (): JSX.Element => {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {technicalSkills.map((skill, index) => (
                   <div key={index} className="flex flex-col items-center text-center" data-testid={`skill-technical-${skill.name.toLowerCase()}`}>
-                    <div className="w-16 h-16 bg-blue-700/30 rounded-xl flex items-center justify-center text-2xl mb-3 border border-white/20">
-                      {skill.icon}
+                    <div className="w-16 h-16 bg-blue-700/30 rounded-xl flex items-center justify-center mb-3 border border-white/20 overflow-hidden">
+                      <img 
+                        src={getIcon(skill.icon)} 
+                        alt={skill.name}
+                        className="w-10 h-10 object-contain"
+                      />
                     </div>
                     <span className="text-white font-medium">{skill.name}</span>
                   </div>
@@ -77,8 +96,12 @@ export const Skills = (): JSX.Element => {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {designingSkills.map((skill, index) => (
                   <div key={index} className="flex flex-col items-center text-center" data-testid={`skill-design-${skill.name.toLowerCase().replace(' ', '-')}`}>
-                    <div className="w-16 h-16 bg-blue-700/30 rounded-xl flex items-center justify-center text-2xl mb-3 border border-white/20">
-                      {skill.icon}
+                    <div className="w-16 h-16 bg-blue-700/30 rounded-xl flex items-center justify-center mb-3 border border-white/20 overflow-hidden">
+                      <img 
+                        src={getIcon(skill.icon)} 
+                        alt={skill.name}
+                        className="w-10 h-10 object-contain"
+                      />
                     </div>
                     <span className="text-white font-medium">{skill.name}</span>
                   </div>
