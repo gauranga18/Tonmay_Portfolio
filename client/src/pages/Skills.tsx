@@ -4,37 +4,22 @@ import { Link } from "wouter";
 import { Navbar } from "@/components/Navbar";
 
 export const Skills = (): JSX.Element => {
-  // Import all skill icons (place images in `client/src/assets/skill-icons`)
-  const iconModules = import.meta.glob(
-    '@/assets/skill-icons/*.{png,jpg,jpeg,svg}',
-    { eager: true, as: 'url' }
-  ) as Record<string, string>;
-
-  // Helper function to get icon path by name
-  const getIcon = (iconName: string) => {
-    const normalized = iconName.toLowerCase().replace(/\s+/g, '-');
-    const match = Object.entries(iconModules).find(([path]) =>
-      path.toLowerCase().includes(`${normalized}.`)
-    );
-    return match ? match[1] : '';
-  };
-
   const technicalSkills = [
-    { name: "HTML", icon: "html" },
-    { name: "CSS", icon: "css" },
-    { name: "Figma", icon: "figma" },
-    { name: "Adobe Express", icon: "adobe-express" },
-    { name: "C", icon: "c" },
-    { name: "Python", icon: "python" },
-    { name: "C++", icon: "cpp" },
-    { name: "MySQL", icon: "mysql" }
+    { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+    { name: "CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
+    { name: "Figma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
+    { name: "Adobe Express", icon: "https://img.icons8.com/?size=100&id=118571&format=png&color=000000" },
+    { name: "C", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" },
+    { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+    { name: "C++", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" },
+    { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" }
   ];
 
   const designingSkills = [
-    { name: "Web Design", icon: "web-design" },
-    { name: "App Design", icon: "app-design" },
-    { name: "Logo Design", icon: "logo-design" },
-    { name: "Brand Design", icon: "brand-design" }
+    { name: "Web Design", icon: "https://cdn-icons-png.flaticon.com/512/1006/1006773.png" },
+    { name: "App Design", icon: "https://cdn-icons-png.flaticon.com/512/3594/3594465.png" },
+    { name: "Logo Design", icon: "https://cdn-icons-png.flaticon.com/512/4247/4247931.png" },
+    { name: "Brand Design", icon: "https://cdn-icons-png.flaticon.com/512/3148/3148876.png" }
   ];
 
   const interpersonalSkills = [
@@ -75,7 +60,7 @@ export const Skills = (): JSX.Element => {
                   <div key={index} className="flex flex-col items-center text-center" data-testid={`skill-technical-${skill.name.toLowerCase()}`}>
                     <div className="w-16 h-16 bg-blue-700/30 rounded-xl flex items-center justify-center mb-3 border border-white/20 overflow-hidden">
                       <img 
-                        src={getIcon(skill.icon)} 
+                        src={skill.icon} 
                         alt={skill.name}
                         className="w-10 h-10 object-contain"
                       />
@@ -98,7 +83,7 @@ export const Skills = (): JSX.Element => {
                   <div key={index} className="flex flex-col items-center text-center" data-testid={`skill-design-${skill.name.toLowerCase().replace(' ', '-')}`}>
                     <div className="w-16 h-16 bg-blue-700/30 rounded-xl flex items-center justify-center mb-3 border border-white/20 overflow-hidden">
                       <img 
-                        src={getIcon(skill.icon)} 
+                        src={skill.icon} 
                         alt={skill.name}
                         className="w-10 h-10 object-contain"
                       />
