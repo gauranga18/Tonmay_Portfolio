@@ -1,5 +1,5 @@
 import React from "react";
-import aboutImg from "../assets/about-image.png"; // Replace with your image path
+import MyImage from "../assets/Image_pngofmine.png"; // Replace with your image path
 import Navbar from "./Navbar";
 export default function About() {
   return (
@@ -50,7 +50,7 @@ export default function About() {
         {/* Right Section - Illustration */}
         <div className="flex justify-center md:w-1/2 w-full">
           <img
-            src={aboutImg}
+            src={MyImage}
             alt="About Illustration"
             className="w-72 md:w-[400px] lg:w-[500px] drop-shadow-xl"
           />
