@@ -5,7 +5,7 @@ import Navbar from "./Navbar";
 export default function Home() {
   return (
 <div>
-  {/* <Navbar/> */}
+  <Navbar/>
   <section className="min-h-screen bg-gradient-to-b from-blue-600 to-cyan-500 text-white">
       <div className="max-w-6xl mx-auto px-6 pt-24 grid lg:grid-cols-2 gap-12 items-center">
         {/* Left Content */}
