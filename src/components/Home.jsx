@@ -1,9 +1,14 @@
 import React from "react";
-import { Link } from "wouter";
 import MyImage from "../assets/Image_pngofmine.png";
 import Navbar from "./Navbar";
 
 export default function Home() {
+  const handleExploreClick = (e) => {
+    e.preventDefault();
+    // Simple window navigation - most reliable method
+    window.location.href = "/projects";
+  };
+
   return (
     <div>
       <Navbar />
@@ -31,11 +36,13 @@ export default function Home() {
 
               {/* CTA Button */}
               <div className="pt-4">
-                <Link href="/projects">
-                  <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full shadow-lg hover:opacity-90 transition-all duration-200 text-base sm:text-lg font-medium">
-                    Explore My Works
-                  </button>
-                </Link>
+                <a 
+                  href="/projects"
+                  onClick={handleExploreClick}
+                  className="inline-block bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full shadow-lg hover:shadow-xl hover:from-purple-600 hover:to-blue-600 transform hover:scale-105 transition-all duration-300 text-base sm:text-lg font-medium cursor-pointer no-underline"
+                >
+                  Explore My Works
+                </a>
               </div>
 
               {/* Stats */}
@@ -47,7 +54,7 @@ export default function Home() {
                     </div>
                     <div className="min-w-0">
                       <div className="text-xs sm:text-sm text-white/80">Top 5% on</div>
-                      <div className="font-semibold text-sm sm:text-base">Front end Mentor</div>
+                      <div className="font-semibold text-sm sm:text-base">Frontend Mentor</div>
                     </div>
                   </div>
                 </div>
@@ -58,7 +65,7 @@ export default function Home() {
                       <div className="text-lg font-bold text-white">10+</div>
                     </div>
                     <div className="min-w-0">
-                      <div className="text-xs sm:text-sm text-white/80">Project</div>
+                      <div className="text-xs sm:text-sm text-white/80">Projects</div>
                       <div className="font-semibold text-sm sm:text-base">Launched</div>
                     </div>
                   </div>
@@ -97,20 +104,24 @@ export default function Home() {
               {/* Social Links */}
               <div className="flex justify-center sm:justify-start space-x-4 pt-4 lg:pt-8">
                 <a
-                  href="#"
-                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center hover:bg-white/20 transition-all duration-200"
+                  href="https://instagram.com/your_username"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center hover:bg-white/20 hover:scale-110 transition-all duration-200"
                 >
                   <i className="fab fa-instagram text-lg sm:text-xl"></i>
                 </a>
                 <a
-                  href="#"
-                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center hover:bg-white/20 transition-all duration-200"
+                  href="https://linkedin.com/in/your_username"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center hover:bg-white/20 hover:scale-110 transition-all duration-200"
                 >
                   <i className="fab fa-linkedin text-lg sm:text-xl"></i>
                 </a>
                 <a
-                  href="#"
-                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center hover:bg-white/20 transition-all duration-200"
+                  href="mailto:tanmay@example.com"
+                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center hover:bg-white/20 hover:scale-110 transition-all duration-200"
                 >
                   <i className="fas fa-envelope text-lg sm:text-xl"></i>
                 </a>
@@ -122,7 +133,7 @@ export default function Home() {
               <div className="w-full max-w-md sm:max-w-lg lg:max-w-none">
                 <img
                   src={MyImage}
-                  alt="My Illustration"
+                  alt="Tanmay - UI/UX & Frontend Designer"
                   className="w-full h-auto object-contain rounded-lg shadow-2xl"
                 />
               </div>
