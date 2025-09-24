@@ -104,24 +104,27 @@ export default function Home() {
               {/* Social Links */}
               <div className="flex justify-center sm:justify-start space-x-4 pt-4 lg:pt-8">
                 <a
-                  href="https://instagram.com/your_username"
+                  href="https://www.instagram.com/tnmydeori__/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center hover:bg-white/20 hover:scale-110 transition-all duration-200"
+                  aria-label="Instagram Profile"
                 >
                   <i className="fab fa-instagram text-lg sm:text-xl"></i>
                 </a>
                 <a
-                  href="https://linkedin.com/in/your_username"
+                  href="https://www.linkedin.com/in/tonmay-deori-652432284"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center hover:bg-white/20 hover:scale-110 transition-all duration-200"
+                  aria-label="LinkedIn Profile"
                 >
                   <i className="fab fa-linkedin text-lg sm:text-xl"></i>
                 </a>
                 <a
-                  href="mailto:tanmay@example.com"
+                  href="mailto:tonmoydeori09@gmail.com"
                   className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center hover:bg-white/20 hover:scale-110 transition-all duration-200"
+                  aria-label="Email Contact"
                 >
                   <i className="fas fa-envelope text-lg sm:text-xl"></i>
                 </a>
