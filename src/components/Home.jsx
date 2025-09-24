@@ -2,127 +2,134 @@ import React from "react";
 import { Link } from "wouter";
 import MyImage from "../assets/Image_pngofmine.png";
 import Navbar from "./Navbar";
+
 export default function Home() {
   return (
-<div>
-  <Navbar/>
-  <section className="min-h-screen bg-gradient-to-b from-blue-600 to-cyan-500 text-white">
-      <div className="max-w-6xl mx-auto px-6 pt-24 grid lg:grid-cols-2 gap-12 items-center">
-        {/* Left Content */}
-        <div>
-          {/* Tagline */}
-          <div className="text-lg italic text-white/80 mb-4">Innovate Unique</div>
+    <div>
+      <Navbar />
+      <section className="min-h-screen bg-gradient-to-b from-blue-600 to-cyan-500 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 lg:pt-24 pb-8 lg:pb-16">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center min-h-[calc(100vh-8rem)]">
+            {/* Left Content */}
+            <div className="order-2 lg:order-1 space-y-6 lg:space-y-8">
+              {/* Tagline */}
+              <div className="text-base sm:text-lg italic text-white/80">Innovate Unique</div>
 
-          {/* Heading */}
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">
-            Hi, I’m <span className="text-cyan-300">Tanmay</span>
-          </h1>
+              {/* Heading */}
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
+                Hi, I'm <span className="text-cyan-300">Tanmay</span>
+              </h1>
 
-          {/* Subtitle */}
-          <p className="text-xl text-white/90 mb-6">UI/UX & Frontend Designer</p>
+              {/* Subtitle */}
+              <p className="text-lg sm:text-xl lg:text-2xl text-white/90">UI/UX & Frontend Designer</p>
 
-          {/* Description */}
-          <p className="text-lg text-white/80 mb-8 leading-relaxed">
-            A passionate of delivering intuitive user experiences across web and
-            mobile applications
-          </p>
-
-          {/* CTA Button */}
-          <Link href="/projects">
-            <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-3 rounded-full shadow-lg hover:opacity-90 transition mb-12">
-              Explore My Works
-            </button>
-          </Link>
-
-          {/* Stats */}
-          <div className="grid grid-cols-2 gap-6 mb-12">
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 shadow-lg hover:bg-white/20 transition">
-              <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 bg-red-500 rounded-lg flex items-center justify-center">
-                  <i className="fas fa-trophy text-white text-sm"></i>
-                </div>
-                <div>
-                  <div className="text-sm text-white/80">Top 5% on</div>
-                  <div className="font-semibold">Front end Mentor</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 shadow-lg hover:bg-white/20 transition">
-              <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
-                  <div className="text-2xl font-bold text-white">10+</div>
-                </div>
-                <div>
-                  <div className="text-sm text-white/80">Project</div>
-                  <div className="font-semibold">Launched</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Services */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 text-center shadow-lg hover:bg-white/20 transition">
-              <div className="w-12 h-12 bg-pink-500 rounded-lg mx-auto mb-4 flex items-center justify-center">
-                <i className="fas fa-code text-white"></i>
-              </div>
-              <h3 className="font-semibold mb-2">Web Design</h3>
-              <p className="text-sm text-white/80">Clean, responsive, and user-focused</p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 text-center shadow-lg hover:bg-white/20 transition">
-              <div className="w-12 h-12 bg-purple-500 rounded-lg mx-auto mb-4 flex items-center justify-center">
-                <i className="fas fa-mobile-alt text-white"></i>
-              </div>
-              <h3 className="font-semibold mb-2">App Design</h3>
-              <p className="text-sm text-white/80">
-                Simple, intuitive mobile experiences
+              {/* Description */}
+              <p className="text-base sm:text-lg text-white/80 leading-relaxed max-w-lg">
+                A passionate of delivering intuitive user experiences across web and
+                mobile applications
               </p>
-            </div>
 
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 text-center shadow-lg hover:bg-white/20 transition">
-              <div className="w-12 h-12 bg-blue-500 rounded-lg mx-auto mb-4 flex items-center justify-center">
-                <i className="fas fa-paint-brush text-white"></i>
+              {/* CTA Button */}
+              <div className="pt-4">
+                <Link href="/projects">
+                  <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full shadow-lg hover:opacity-90 transition-all duration-200 text-base sm:text-lg font-medium">
+                    Explore My Works
+                  </button>
+                </Link>
               </div>
-              <h3 className="font-semibold mb-2">Branding</h3>
-              <p className="text-sm text-white/80">Visual identity with impact</p>
+
+              {/* Stats */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6 pt-4 lg:pt-8">
+                <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 lg:p-6 shadow-lg hover:bg-white/20 transition-all duration-200">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-8 h-8 bg-red-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <i className="fas fa-trophy text-white text-sm"></i>
+                    </div>
+                    <div className="min-w-0">
+                      <div className="text-xs sm:text-sm text-white/80">Top 5% on</div>
+                      <div className="font-semibold text-sm sm:text-base">Front end Mentor</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 lg:p-6 shadow-lg hover:bg-white/20 transition-all duration-200">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <div className="text-lg font-bold text-white">10+</div>
+                    </div>
+                    <div className="min-w-0">
+                      <div className="text-xs sm:text-sm text-white/80">Project</div>
+                      <div className="font-semibold text-sm sm:text-base">Launched</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Services */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-6 pt-4 lg:pt-8">
+                <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 lg:p-6 text-center shadow-lg hover:bg-white/20 transition-all duration-200">
+                  <div className="w-10 h-10 lg:w-12 lg:h-12 bg-pink-500 rounded-lg mx-auto mb-3 lg:mb-4 flex items-center justify-center">
+                    <i className="fas fa-code text-white text-sm lg:text-base"></i>
+                  </div>
+                  <h3 className="font-semibold mb-2 text-sm lg:text-base">Web Design</h3>
+                  <p className="text-xs lg:text-sm text-white/80 leading-relaxed">Clean, responsive, and user-focused</p>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 lg:p-6 text-center shadow-lg hover:bg-white/20 transition-all duration-200">
+                  <div className="w-10 h-10 lg:w-12 lg:h-12 bg-purple-500 rounded-lg mx-auto mb-3 lg:mb-4 flex items-center justify-center">
+                    <i className="fas fa-mobile-alt text-white text-sm lg:text-base"></i>
+                  </div>
+                  <h3 className="font-semibold mb-2 text-sm lg:text-base">App Design</h3>
+                  <p className="text-xs lg:text-sm text-white/80 leading-relaxed">
+                    Simple, intuitive mobile experiences
+                  </p>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 lg:p-6 text-center shadow-lg hover:bg-white/20 transition-all duration-200 sm:col-span-3 md:col-span-1">
+                  <div className="w-10 h-10 lg:w-12 lg:h-12 bg-blue-500 rounded-lg mx-auto mb-3 lg:mb-4 flex items-center justify-center">
+                    <i className="fas fa-paint-brush text-white text-sm lg:text-base"></i>
+                  </div>
+                  <h3 className="font-semibold mb-2 text-sm lg:text-base">Branding</h3>
+                  <p className="text-xs lg:text-sm text-white/80 leading-relaxed">Visual identity with impact</p>
+                </div>
+              </div>
+
+              {/* Social Links */}
+              <div className="flex justify-center sm:justify-start space-x-4 pt-4 lg:pt-8">
+                <a
+                  href="#"
+                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center hover:bg-white/20 transition-all duration-200"
+                >
+                  <i className="fab fa-instagram text-lg sm:text-xl"></i>
+                </a>
+                <a
+                  href="#"
+                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center hover:bg-white/20 transition-all duration-200"
+                >
+                  <i className="fab fa-linkedin text-lg sm:text-xl"></i>
+                </a>
+                <a
+                  href="#"
+                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center hover:bg-white/20 transition-all duration-200"
+                >
+                  <i className="fas fa-envelope text-lg sm:text-xl"></i>
+                </a>
+              </div>
+            </div>
+
+            {/* Right Content - Image */}
+            <div className="order-1 lg:order-2 flex justify-center items-center">
+              <div className="w-full max-w-md sm:max-w-lg lg:max-w-none">
+                <img
+                  src={MyImage}
+                  alt="My Illustration"
+                  className="w-full h-auto object-contain rounded-lg shadow-2xl"
+                />
+              </div>
             </div>
           </div>
-
-          {/* Social Links */}
-          <div className="flex space-x-4 mt-8">
-            <a
-              href="#"
-              className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center hover:bg-white/20 transition"
-            >
-              <i className="fab fa-instagram text-xl"></i>
-            </a>
-            <a
-              href="#"
-              className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center hover:bg-white/20 transition"
-            >
-              <i className="fab fa-linkedin text-xl"></i>
-            </a>
-            <a
-              href="#"
-              className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center hover:bg-white/20 transition"
-            >
-              <i className="fas fa-envelope text-xl"></i>
-            </a>
-          </div>
         </div>
-
-        {/* Right Content - Image */}
-        <div className="flex justify-center items-center w-full h-full">
-          <img
-            src={MyImage}
-            alt="My Illustration"
-            className="w-full h-auto object-contain max-h-[80vh] rounded-lg"
-          />
-        </div>
-      </div>
-    </section>
-</div>
+      </section>
+    </div>
   );
 }
