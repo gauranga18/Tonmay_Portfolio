@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Phone } from 'lucide-react';
-
+import Navbar from './Navbar';
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -23,6 +23,8 @@ const Contact = () => {
   };
 
   return (
+   <>
+   <Navbar/>
     <div className="min-h-screen bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center p-4">
       <div className="w-full max-w-2xl bg-white bg-opacity-10 backdrop-blur-sm rounded-3xl border-2 border-white border-opacity-30 p-8 md:p-12">
         {/* Header */}
@@ -105,6 +107,7 @@ const Contact = () => {
         </div>
       </div>
     </div>
+   </>
   );
 };
 

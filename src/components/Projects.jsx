@@ -6,10 +6,10 @@ import videoMain from '../assets/Frame 15.png'
 import carRentalMain from '../assets/Frame 16.png'
 import ridingGearMain from '../assets/Rynox - riding gears 1.png'
 import toursTravelMain from '../assets/Rynox - riding gears 2.png'
-import moneyMgmtMain from '../assets/Rynox - riding gears 4.png'
+import moneyMgmtMain from '../assets/Money-management.png'
 
 // Add a proper image for Chromatik or use a placeholder
-import chromatikMain from '../assets/Frame 15.png' 
+import chromatikMain from '../assets/Rynox - riding gears 4.png' 
 
 const projects = [
   {
@@ -59,7 +59,7 @@ const projects = [
   },
   {
     id: 6,
-    title: "Chromatik -Personal AI Stylist Application Design",
+    title: "Chromafit -Personal AI Stylist Application Design",
     description: "An AI-based virtual styling app that recommends outfits based on user preferences, body type, and occasion. The design highlights personalization, smooth onboarding, and an interactive style matching experience.",
     buildWith: "Figma",
     cover: chromatikMain,
