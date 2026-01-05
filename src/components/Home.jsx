@@ -1,5 +1,5 @@
 import React from "react";
-import MyImage from "../assets/Image_pngofmine.png";
+import MyImage from "../assets/pfp.png";
 import Stars from "../assets/stars.png";
 import Navbar from "./Navbar";
 
@@ -18,7 +18,7 @@ export default function Home() {
             {/* Left Content */}
             <div className="space-y-6">
               {/* Tagline */}
-              <div className="text-lg italic text-white/90 font-light">Innovate Unique</div>
+              <div className="text-4xl font-birthstone text-white/90">Innovate Unique</div>
 
               {/* Heading */}
               <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
