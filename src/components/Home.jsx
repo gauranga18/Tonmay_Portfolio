@@ -12,21 +12,21 @@ export default function Home() {
   return (
     <div>
       <Navbar />
-      <section className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-500 to-cyan-400 text-white pt-1">
+      <section className="min-h-screen bg-gradient-to-b from-blue-600 via-cyan-500 to-cyan-400 text-white pt-1">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-1 lg:py-2">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <div className="space-y-6">
               {/* Tagline */}
-              <div className="text-4xl font-birthstone text-white/90">Innovate Unique</div>
+              <div className="text-5xl font-birthstone text-white/90">Innovate Unique</div>
 
               {/* Heading */}
-              <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
-                Hi, I'm <span className="text-cyan-200">Tanmay</span>
+              <h1 className="text-5xl lg:text-6xl xl:text-7xl font-light leading-tight">
+                Hi, I'm <span className="text-cyan-200 font-semibold">Tanmay</span>
               </h1>
 
               {/* Subtitle */}
-              <p className="text-xl lg:text-2xl text-white/95 font-light">UI Designer & Frontend Devloper</p>
+              <p className="text-xl lg:text-2xl text-white/95 font-medium">UI/UX Designer & Frontend Designer</p>
 
               {/* Description */}
               <p className="text-base lg:text-lg text-white/90 leading-relaxed max-w-xl">

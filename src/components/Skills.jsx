@@ -100,7 +100,7 @@ const Projects = () => {
     <>
       <Navbar />
 
-      <div className="min-h-screen bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 px-4 md:px-8 py-10">
+      <div className="min-h-screen bg-gradient-to-b from-blue-600 via-cyan-500 to-cyan-400 px-4 md:px-8 py-10">
         <div className="max-w-4xl mx-auto space-y-10">
 
           {/* Technical Skills */}

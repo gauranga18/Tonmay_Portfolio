@@ -13,7 +13,7 @@ export default function Navbar() {
     "hover:text-gray-200 transition-colors duration-300 relative group";
 
   return (
-    <nav className="flex items-center justify-between px-4 sm:px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-blue-600 to-blue-700 shadow-md">
+    <nav className="flex items-center justify-between px-4 sm:px-6 md:px-8 py-3 md:py-4 bg-gradient-to-b from-blue-600 to-blue-600 shadow-md">
       
       {/* Left section */}
       <div className="flex items-center gap-3 md:gap-4">

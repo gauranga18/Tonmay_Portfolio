@@ -77,7 +77,7 @@ const Projects = () => {
   return (
     <>
       <Navbar/>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 p-4 md:p-8">
+      <div className="min-h-screen bg-gradient-to-b from-blue-600 via-cyan-500 to-cyan-400 p-4 md:p-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid gap-8 md:grid-cols-2">
             {projects.map((project) => (
