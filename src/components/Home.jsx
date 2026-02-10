@@ -26,7 +26,7 @@ export default function Home() {
               </h1>
 
               {/* Subtitle */}
-              <p className="text-xl lg:text-2xl text-white/95 font-medium">UI/UX Designer & Frontend Designer</p>
+              <p className="text-xl lg:text-2xl text-white/95 font-medium">UI/UX & Frontend Designer</p>
 
               {/* Description */}
               <p className="text-base lg:text-lg text-white/90 leading-relaxed max-w-xl">
