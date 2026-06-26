@@ -10,6 +10,7 @@ const App = () => {
   return (
   <Router>
       <div>
+
         {/* <Navbar /> */}
 
         {/* Define your routes */}
